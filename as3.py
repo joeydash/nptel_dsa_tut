@@ -4,7 +4,6 @@ def progression(l):
         return False
     if n == 1:
         return True
-    l.sort()
     d = l[1] - l[0]
     for i in range(2, n):
         if l[i] - l[i - 1] != d:
@@ -13,6 +12,8 @@ def progression(l):
 
 
 def is_prime(num):
+    if num == 1:
+        return False
     for i in range(2, num):
         if (num % i) == 0:
             return False
